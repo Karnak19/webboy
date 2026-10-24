@@ -1,0 +1,20 @@
+{
+  "name": "webboy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen-icons": "bun scripts/gen-icons.ts",
+    "build": "bun run gen-icons && bun build.ts",
+    "check": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "preact": "^10.24.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "@types/chrome": "^0.0.287",
+    "typescript": "^5.6.3"
+  }
+}
