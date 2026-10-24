@@ -6,6 +6,7 @@
   "scripts": {
     "gen-icons": "bun scripts/gen-icons.ts",
     "build": "bun run gen-icons && bun build.ts",
+    "package": "bun run build && rm -f webboy.zip && cd dist && zip -rq ../webboy.zip . && echo '✓ webboy.zip (contenu de dist/, manifest à la racine)'",
     "check": "tsc --noEmit",
     "test": "bun test"
   },

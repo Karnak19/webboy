@@ -13,15 +13,26 @@ gagnant en premier.
 ## Prérequis
 
 - [Helium](https://github.com/imputnet/helium) (ou n'importe quel Chromium récent)
-- [Bun](https://bun.sh)
 - Un abonnement [OpenCode Go](https://opencode.ai/go) et sa clé API
   ([Console OpenCode](https://opencode.ai/v2/docs/console/go) → Go → copier la clé)
 
 ## Build & installation
 
+### Sans build (autre machine)
+
+1. Télécharge `webboy.zip` depuis la [dernière release](https://github.com/Karnak19/webboy/releases/latest)
+2. Dézippe-le où tu veux
+3. Dans Helium : `chrome://extensions` → **mode développeur** → **Charger
+   l'extension non empaquetée** → sélectionne le dossier dézippé
+
+### Depuis les sources
+
+Prérequis : [Bun](https://bun.sh).
+
 ```sh
 bun install
 bun run build     # → dist/
+bun run package   # → dist/ + webboy.zip prêt à distribuer
 ```
 
 Dans Helium :
